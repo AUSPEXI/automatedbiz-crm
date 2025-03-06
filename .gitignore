@@ -1,0 +1,16 @@
+﻿node_modules/
+dist/
+build/
+*.log
+*.cache
+*.tmp
+__pycache__/
+*.pyc
+*.wav
+*.mp4
+output/
+.DS_Store
+.stackblitzrc
+.env
+.vscode/
+package-lock.json

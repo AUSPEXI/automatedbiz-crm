@@ -1,0 +1,14 @@
+CREATE TABLE metrics (
+  name text PRIMARY KEY,
+  value jsonb NOT NULL DEFAULT '{"activeUsers": 0, "video_engagement": {"optimal_duration": 60, "engagement_boost": 10}}'::jsonb,
+  created_at timestamptz DEFAULT now()
+);
+
+ALTER TABLE metrics ENABLE ROW LEVEL SECURITY;
+
+CREATE POLICY "Users can manage metrics"
+  ON metrics
+  FOR ALL
+  TO authenticated
+  USING (true)
+  WITH CHECK (true);

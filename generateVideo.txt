@@ -1,0 +1,14 @@
+const generateVideo = async (script: string, visuals: any, voiceover: string, platform: string) => {
+  const response = await fetch('https://api.invideo.io/v1/videos', {
+    method: 'POST',
+    headers: {
+      'Authorization': `Bearer ${process.env.INVIDEO_API_KEY}`,
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      script, visuals, voiceover, platform, duration: 60, format: platform === 'youtube' ? '1080p' : '720p',
+    }),
+  });
+  const data = await response.json();
+  return { url: data.videoUrl, duration: data.duration, format: data.format };
+};
