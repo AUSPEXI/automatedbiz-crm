@@ -3,19 +3,14 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  resolve: {
-    alias: {
-      '@': '/src',
-    },
-  },
-  server: {
-    port: 3000,
-    open: true,
-  },
+ 
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
     rollupOptions: {
+      input: {
+        main: 'public/index.html', // Adjust to 'index.html' if in root
+      },
       output: {
         manualChunks: {
           vendor: ['react', 'react-dom', 'react-router-dom'],
@@ -24,6 +19,15 @@ export default defineConfig({
         },
       },
     },
+  },
+  resolve: {
+    alias: {
+      '@': '/src',
+    },
+  },
+  server: {
+    port: 3000,
+    open: true,
   },
   define: {
     'import.meta.env.VITE_SUPABASE_URL': JSON.stringify(process.env.VITE_SUPABASE_URL),
