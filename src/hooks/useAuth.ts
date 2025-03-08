@@ -1,7 +1,14 @@
-// src/hooks/useAuth.ts
 import { createContext, useContext, useState, ReactNode } from 'react';
 
-const AuthContext = createContext<any>(null);
+// Define the context with a proper type
+interface AuthContextType {
+  user: any | null;
+  profile: any | null;
+  loading: boolean;
+  signOut: () => void;
+}
+
+const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
 export const useAuth = () => {
   const context = useContext(AuthContext);
@@ -10,16 +17,17 @@ export const useAuth = () => {
 };
 
 export const AuthProvider = ({ children }: { children: ReactNode }) => {
-  const [user, setUser] = useState(null);
-  const [profile, setProfile] = useState(null);
+  const [user, setUser] = useState<any | null>(null);
+  const [profile, setProfile] = useState<any | null>(null);
   const [loading, setLoading] = useState(true);
 
   const signOut = () => {
     setUser(null);
     setProfile(null);
+    setLoading(false); // Optional: Reset loading state
   };
 
-  const value = { user, profile, loading, signOut };
+  const value: AuthContextType = { user, profile, loading, signOut };
 
   return (
     <AuthContext.Provider value={value}>
