@@ -3,13 +3,12 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
- 
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
     rollupOptions: {
       input: {
-        main: 'public/index.html', // Adjust to 'index.html' if in root
+        main: 'public/index.html',
       },
       output: {
         manualChunks: {
