@@ -2,13 +2,7 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
 export default defineConfig({
-  plugins: [
-    react({
-      babel: {
-        plugins: ['@babel/plugin-syntax-jsx'], // Ensure JSX syntax is handled correctly
-      },
-    }),
-  ],
+  plugins: [react()],
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
@@ -39,8 +33,5 @@ export default defineConfig({
     'import.meta.env.VITE_SUPABASE_ANON_KEY': JSON.stringify(process.env.VITE_SUPABASE_ANON_KEY),
     'import.meta.env.VITE_OPENAI_API_KEY': JSON.stringify(process.env.VITE_OPENAI_API_KEY),
     'import.meta.env.VITE_OPENAI_ORG_ID': JSON.stringify(process.env.VITE_OPENAI_ORG_ID),
-  },
-  esbuild: {
-    jsxInject: `import React from 'react'`, // Ensure React is available for JSX (Vite 6.x stricter handling)
   },
 });
