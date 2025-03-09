@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useAuth } from '../components/auth/AuthProvider';
+import { useAuth } from '@/hooks/useAuth';
 import { supabase } from '../lib/supabase';
 import { PERMISSIONS } from '../types/auth';
 

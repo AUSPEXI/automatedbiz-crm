@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useAuth } from '@/hooks/useAuth';
 import { abTesting, Test, Variant } from '../lib/abTesting';
 
 export function useABTest(elementId: string) {

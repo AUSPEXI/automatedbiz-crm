@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { useAuth } from '@/hooks/useAuth';
 import { supabase } from '../lib/supabase';
 import { useAuth } from '../components/auth/AuthProvider';
 import type { Achievement, Badge, UserReputation } from '../types/gamification';
