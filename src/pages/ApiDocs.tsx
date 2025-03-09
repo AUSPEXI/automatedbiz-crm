@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useAuth } from '../../hooks/useAuth';
+import { useAuth } from '@/hooks/useAuth';
 import { integrationService, IntegrationProvider } from '../../lib/integrations';
 import { supabase } from '../../lib/supabase';
 import { Book, Code, Eye } from 'lucide-react';

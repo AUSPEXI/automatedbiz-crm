@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useAuth } from '@/hooks/useAuth';
 import WebsiteChatAnalytics from '../components/website/WebsiteChatAnalytics'; // Assuming this exists
 import { BarChart2, Brain, Download } from 'lucide-react';
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import { useAuth } from '@/hooks/useAuth';
 import WebsiteChatInterface from '../components/website/WebsiteChatInterface'; // Assuming this exists
 import { MessageSquare, Brain } from 'lucide-react';
 

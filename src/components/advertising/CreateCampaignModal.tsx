@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useAuth } from '@/hooks/useAuth';
 import { X, Plus } from 'lucide-react';
 
 interface Props {

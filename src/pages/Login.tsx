@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useAuth } from '../hooks/useAuth';
+import { useAuth } from '@/hooks/useAuth';
 import { supabase } from '../lib/supabase';
 import { Mail, Lock, ArrowRight } from 'lucide-react';
 

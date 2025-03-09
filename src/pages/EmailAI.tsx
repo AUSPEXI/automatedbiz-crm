@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useAuth } from '../hooks/useAuth';
+import { useAuth } from '@/hooks/useAuth';
 import CampaignWizard from '../components/email/CampaignWizard';
 import { supabase } from '../lib/supabase';
 import { Mail, Brain, Plus } from 'lucide-react';

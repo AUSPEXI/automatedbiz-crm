@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { useAuth } from '@/hooks/useAuth';
 import { oauthService } from '../lib/oauth';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';

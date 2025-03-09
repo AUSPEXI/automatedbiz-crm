@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { blogService } from '../lib/blog';
 import { supabase } from '../lib/supabase';
 import { ArrowLeft } from 'lucide-react';
+import { useAuth } from '@/hooks/useAuth';
 
 const BlogPostView: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useAuth } from '../hooks/useAuth';
+import { useAuth } from '@/hooks/useAuth';
 import { useReport } from '../hooks/useReport';
 import { supabase } from '../lib/supabase';
 import AdContentWizard from '../components/advertising/AdContentWizard';

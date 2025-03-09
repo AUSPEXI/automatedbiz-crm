@@ -1,4 +1,5 @@
 import React from 'react';
+import { useAuth } from '@/hooks/useAuth';
 import WebsiteChatMonitoring from '../components/website/WebsiteChatMonitoring'; // Assuming this exists
 import { MessageSquare, Brain, AlertCircle } from 'lucide-react';
 

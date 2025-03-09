@@ -1,4 +1,5 @@
 import React from 'react';
+import { useAuth } from '@/hooks/useAuth';
 import WebsiteChatSettings from '../components/website/WebsiteChatSettings'; // Assuming this exists
 import { Settings, Brain } from 'lucide-react';
 

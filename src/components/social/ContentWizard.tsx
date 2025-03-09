@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useAuth } from '../../hooks/useAuth';
+import { useAuth } from '@/hooks/useAuth';
 import { generateContent } from '../../lib/openai';
 import { supabase } from '../../lib/supabase';
 import { Wand2, X } from 'lucide-react';

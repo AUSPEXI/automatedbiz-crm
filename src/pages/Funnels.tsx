@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useAuth } from '../hooks/useAuth';
+import { useAuth } from '@/hooks/useAuth';
 import FunnelCreator from '../components/funnels/FunnelCreator';
 import VideoProductionWizard from '../components/video/VideoProductionWizard';
 import { Plus, Brain, Globe, Video } from 'lucide-react';

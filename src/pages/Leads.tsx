@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useAuth } from '../hooks/useAuth';
+import { useAuth } from '@/hooks/useAuth';
 import AddLeadModal from '../components/leads/AddLeadModal';
 import { supabase } from '../lib/supabase';
 import { Plus, Brain, Users } from 'lucide-react';

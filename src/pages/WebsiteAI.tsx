@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useAuth } from '../hooks/useAuth';
+import { useAuth } from '@/hooks/useAuth';
 import VideoProductionWizard from '../components/video/VideoProductionWizard';
 import { Brain, Zap, Settings } from 'lucide-react';
 

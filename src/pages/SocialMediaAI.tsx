@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useAuth } from '../hooks/useAuth';
+import { useAuth } from '@/hooks/useAuth';
 import ContentWizard from '../components/social/ContentWizard';
 import { supabase } from '../lib/supabase';
 import { MessageSquare, Brain, Plus } from 'lucide-react';

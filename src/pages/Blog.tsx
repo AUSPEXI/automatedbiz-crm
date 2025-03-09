@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useAuth } from '../hooks/useAuth';
+import { useAuth } from '@/hooks/useAuth';
 import BlogPostCard from '../components/blog/BlogPostCard';
 import BlogAIWizard from '../components/blog/BlogAIWizard';
 import VideoProductionWizard from '../components/video/VideoProductionWizard';
