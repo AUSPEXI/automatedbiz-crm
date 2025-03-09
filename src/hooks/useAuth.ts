@@ -24,7 +24,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
   const signOut = () => {
     setUser(null);
     setProfile(null);
-    setLoading(false); // Optional: Reset loading state
+    setLoading(false);
   };
 
   const value: AuthContextType = { user, profile, loading, signOut };
