@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useAuth } from '../../hooks/useAuth';
+import { useAuth } from '@/hooks/useAuth';
 import { integrationService, IntegrationProvider, UserIntegration } from '../../lib/integrations';
 import { oauthService } from '../../lib/oauth';
 import { supabase } from '../../lib/supabase';
